@@ -1,0 +1,15 @@
+{
+    "name": "maham/fm_etat_civil",
+    "autoload": {
+        "psr-4": {
+            "Maham\\FmEtatCivil\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maham",
+            "email": "mahamoud-inzoudine@hotmail.fr"
+        }
+    ],
+    "require": {}
+}

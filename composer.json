@@ -2,7 +2,10 @@
     "name": "maham/fm_etat_civil",
     "autoload": {
         "psr-4": {
-            "Maham\\FmEtatCivil\\": "src/"
+            "Maham\\FmEtatCivil\\": "src/",
+            "Config\\": "Config/",
+            "Application\\": "Application/",
+            "Templates\\": "Templates/"
         }
     },
     "authors": [

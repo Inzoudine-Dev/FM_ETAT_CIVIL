@@ -6,5 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Templates\\' => array($baseDir . '/Templates'),
     'Maham\\FmEtatCivil\\' => array($baseDir . '/src'),
+    'Config\\' => array($baseDir . '/Config'),
+    'Application\\' => array($baseDir . '/Application'),
 );

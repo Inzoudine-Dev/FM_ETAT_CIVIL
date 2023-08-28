@@ -24,7 +24,7 @@ class App
     public function DefRoutesRdv()
     {
 
-        //route page d'accueil non connecter Utilisateurs en get
+        //Ajout de tout les routes a executer en fonction d'une requtes utiisateur
         $this->router->get('/','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerAccueil', "index");
         $this->router->get('/Motifs','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerMotifs', "index");
         $this->router->post('/Motifs/Personnes','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerPersonnes', "index");

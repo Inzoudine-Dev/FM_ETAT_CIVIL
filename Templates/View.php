@@ -2,6 +2,7 @@
 
 namespace Templates;
 
+
 define('VIEWS_PRENDRE', dirname(__DIR__).DIRECTORY_SEPARATOR.'Templates\Views\Rdv\Prendre_rdv'.DIRECTORY_SEPARATOR);
 
 
@@ -50,7 +51,7 @@ class View
                 //extract($donnees,EXTR_PREFIX_SAME,'dup');
             }
             require VIEWS_PRENDRE. $this->getFichier();
-            $content = ob_get_clean();
+             $content = ob_get_clean();
 
 
             require VIEWS_PRENDRE.'../../../Bases/baseRdv.php';//de vue utilisateurs on sort une fois et on entre dans templates.

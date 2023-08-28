@@ -3,6 +3,7 @@
 namespace Maham\FmEtatCivil\Controllers\Rdv\Prendre;
 
 use Config\Sessions\Session;
+
 use Maham\FmEtatCivil\Controllers\Controller;
 
 class ControllerPersonnes extends  Controller
@@ -14,7 +15,7 @@ class ControllerPersonnes extends  Controller
         parent::render("Personnes", null);
     }
 
-    public function openSession(){
+    public function openSession():void{
         $session=new Session();
         $session->set('donnéesMotifs');
     }

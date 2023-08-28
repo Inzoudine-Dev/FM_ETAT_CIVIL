@@ -10,7 +10,7 @@ class Controller
     public function render(string $actionVue, array $donnees=null ){
 
         $vue =new View($actionVue);
-        $vue->viewPrendre($donnees);
+         $vue->viewPrendre($donnees);
 
     }
 

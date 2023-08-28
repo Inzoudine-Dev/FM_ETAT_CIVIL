@@ -14,5 +14,7 @@
             "email": "mahamoud-inzoudine@hotmail.fr"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-http": "*"
+    }
 }

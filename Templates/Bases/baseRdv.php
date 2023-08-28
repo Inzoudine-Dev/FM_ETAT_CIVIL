@@ -23,10 +23,10 @@
     </div>
 
 
-    <p class="accroche_header">Besoin d'une carte d'identité ou d'un passeport ?
+    <h1 class="accroche_header">Besoin d'une carte d'identité ou d'un passeport ?
         <br>
         <span class="span1" ><strong>Prenons rendez-vous !</strong></span>
-    </p>
+    </h1>
 
     <div class="bt_header">
 
@@ -64,7 +64,7 @@
 
     <section class="conteneur_central" id="sexion">
 
-        <h1 class="titre_sexion" id="titre_sexion_id"><?php echo $titre_sexion_central ?></h1>
+        <h2 class="titre_sexion" id="titre_sexion_id"><?php echo $titre_sexion_central ?></h2>
 
         <?php echo $content ?>
 
@@ -76,7 +76,7 @@
 
 <footer id="footer">
 
-    <ul class="liste_footer">
+    <ul class="liste_footer" >
 
         <li class="li1"><a href="" >Mentions légales</a></li>
         <li class="li_tiret">-</li>

@@ -26,6 +26,7 @@ class App
 
         //route page d'accueil non connecter Utilisateurs en get
         $this->router->get('/','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerAccueil', "index");
+        $this->router->get('/Motifs','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerMotifs', "index");
 
 
 

@@ -1,0 +1,249 @@
+
+/*style du body*/
+body{
+    margin: 0px;
+    background-color: #d3d3d3;
+    font: 12px verdana, arial, sans-serif;
+    width: 100%;
+}
+
+/*******************************************************************************************************/
+
+/*contenue central accueil*/
+
+.conteneur_central {
+    width: 80%;
+    margin-right: 150px;
+
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*style du header*/
+
+#header{
+
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+/*******************************************************************************************************/
+
+/*logo du header*/
+.logo_img{
+    width: 165px;
+    padding: 15px;
+    padding-top: 20px;
+    margin-top: 3px;
+    border:2px #d5b469 solid;
+    border-radius: 0px 30px 30px 0px;
+    margin-left: 3px;
+
+}
+
+.logo_div{
+    flex-grow: 0;
+    text-align: center;
+}
+
+
+/*******************************************************************************************************/
+
+/*texte accroche du header*/
+.accroche_header{
+    text-align: center;
+    flex-grow: 10;
+    margin-bottom: 69px;
+    margin-top: 58px;
+    font-size: 18px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+}
+
+.span1{
+    line-height: 40px;
+}
+
+/*******************************************************************************************************/
+
+/*bouton du header*/
+.bt_accueil{
+    border:none;
+    background-color: #d5b469;
+
+    height: 40px;
+    /*margin-top: 8px;*/
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+
+}
+
+
+.bt_actualités{
+    background-color: #a7a7a7;
+    border:none;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+
+}
+
+.bt_header{
+    margin: auto;
+    text-align: center;/*centre les texte de bouton avec les boutons*/
+    display: flex;
+    flex-direction: column;
+    /*margin-left: 10px;*/
+    margin-right: 10px;
+}
+
+.lien_accueil,.lien_actualité{
+    text-decoration: none;
+}
+
+.lien_actualité{
+    color:white;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.lien_accueil{
+    color:#545454;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+/*******************************************************************************************************/
+
+/*style du footer*/
+#footer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+.liste_footer{
+
+    padding-left: 0px;
+    margin: 0px;
+
+}
+
+.li1,.li2,.li3,.li_tiret{
+    display: inline;
+    padding: 8px;
+    padding-top: 0px;
+}
+
+ul a {
+    text-decoration: none;
+    color:#656564;
+}
+
+.li_tiret{
+
+    color:#656564;
+}
+
+/***************************************************responsive***************************************************/
+
+@media screen and (max-width: 864px) {
+
+    /*Cache le texte du header*/
+    .accroche_header{
+        display: none;
+    }
+
+    /*Cache le texte du header*/
+    .bt_header{
+        display: none;
+    }
+
+    #header {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*Centre la section central*/
+    .conteneur_central{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+
+    /*Met la barre d'evolution a l'horizontal */
+    indicateur_progression {
+        text-align: center;
+        display: inline-flex;
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+
+    /*redimmentionnes les bares */
+    .bar {
+        width: 30px;
+        background: #828282;
+        height: 5px;
+        border-radius: 5px 5px 5px 5px;
+        margin: auto;
+    }
+
+    /*Met l'affichage conteneur general de flex a block*/
+    .conteneur_general {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+
+
+
+    .li3 {
+        display: inline;
+        padding: 8px;
+        padding-top: 0px;
+        display: inline-block;
+    }
+
+    .li_tiret {
+        /* display: none; */
+        padding: 8px;
+        padding-top: 0px;
+    }
+
+    #footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}

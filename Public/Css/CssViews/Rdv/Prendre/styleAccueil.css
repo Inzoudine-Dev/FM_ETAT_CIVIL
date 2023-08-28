@@ -1,0 +1,288 @@
+.conteneur_general{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /*width: 90%;*/
+    padding-bottom: 10px;
+}
+.titre_sexion {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d5b469;
+    text-transform: uppercase;
+    padding: 15px;
+    margin: 0px;
+}
+
+.bt_contenue_accueil{
+    padding: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.bt_prendre {
+    border: 1px #d5b469 solid;
+    display: flex;
+    justify-content: center;
+    width: 430px;
+    margin: auto;
+    cursor: pointer;
+    text-decoration: none;
+
+    background-color: #d5b469;
+    color: #545454;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-size: 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bt_annuler{
+    border: 1px #c62936 solid;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 0px;
+    background-color: #c62936;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 10px;
+    padding-top:11px;
+    padding-bottom:11px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bt_modifier{
+    border-radius: 20px 20px 20px 20px;
+    border: 1px #a7a7a7 solid;
+    margin: 5px;
+    margin-left: 10px;
+    margin-top: 0px;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+
+    background-color: #a7a7a7;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-top:11px;
+    padding-bottom:11px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bt_annule_modif_div{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*l'indicateur de progréssion*/
+#indicateur_progression{
+    text-align: center;
+    display: inline-block;
+    margin: 40px;
+    margin-top: 50px;
+
+}
+
+
+/*les bare et cercle de l'indicateur de progréssion*/
+.bar {
+    width: 5px;
+    background: #828282;
+    height: 30px;
+    border-radius: 5px 5px 0px 0px;
+    margin: auto;
+}
+
+/*les cercle de la bare d'evolution*/
+.circle {
+    width: 35px;
+    height: 35px;
+    background: #c62936;
+    border-radius: 35px;
+    margin-top: -6px;
+}
+
+/*le cercle contenant un numero*/
+.circle.current_step {
+    width: 35px;
+    height: 35px;
+    background: #c62936;
+    border-radius: 35px;
+    margin-top: -6px
+}
+
+
+
+/***************************************************responsive***************************************************/
+
+
+@media screen and (max-width: 864px) {
+
+
+    /*Met la barre d'evolution a l'horizontal */
+    #indicateur_progression {
+        text-align: center;
+        display: inline-flex;
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+
+    /*Met l'affichage conteneur general de flex a block*/
+    .conteneur_general {
+        text-align: center;
+        display: block;
+        justify-content: center;
+        margin-top: 20px;
+        /* width: 90%; */
+        padding-bottom: 10px;
+    }
+
+    /*redimmentionnes les bares */
+    .bar {
+        width: 30px;
+        background: #828282;
+        height: 5px;
+        border-radius: 5px 5px 5px 5px;
+        margin: auto;
+    }
+
+
+    /*Centre le titre de la section central*/
+    .titre_sexion {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bt_annule_modif_div {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .bt_annuler{
+        width: 240px;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .bt_modifier{
+        width: 240px;
+        margin: auto;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+
+    .bt_prendre {
+        border: 1px #d5b469 solid;
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        margin: auto;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #d5b469;
+        color: #545454;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 18px;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .bt_contenue_accueil {
+        padding: 15px;
+        padding-right: 0px;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        margin-bottom: 60px;
+
+    }
+
+    .li_tiret{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 445px)
+{
+    /*cache les tirets du footer*/
+    .li_tiret{
+        display: none;
+    }
+
+    /*changement de mode d'affichage avec diplay*/
+
+    .li3 {
+        display: inline;
+        padding: 8px;
+        padding-top: 0px;
+        display: inline-block;
+    }
+
+
+    #footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 321px)
+{
+    .li_tiret{
+        display: none;
+    }
+
+
+    .li3 {
+        display: inline;
+        padding: 8px;
+        padding-top: 0px;
+        display: inline-block;
+    }
+
+
+
+    #footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

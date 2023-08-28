@@ -2,9 +2,9 @@
 
 namespace Config\Sessions;
 
-use Maham\FmEtatCivil\Classes\Guichet;
-use Maham\FmEtatCivil\Classes\Personne;
-use Maham\FmEtatCivil\Classes\Rendez_vous;
+use Maham\FmEtatCivil\Entities\Guichet;
+use Maham\FmEtatCivil\Entities\Personne;
+use Maham\FmEtatCivil\Entities\Rendez_vous;
 
 class Session
 {

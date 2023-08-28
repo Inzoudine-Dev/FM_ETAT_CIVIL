@@ -1,6 +1,6 @@
 <?php
 
-namespace Maham\FmEtatCivil\Classes;
+namespace Maham\FmEtatCivil\Entities;
 
 class Guichet
 {

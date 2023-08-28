@@ -18,13 +18,6 @@
             <p class="erreur_personnes" id="erreur_personnes1_id" ></p>
         </div>
 
-        <?php echo $_SESSION['nombrePersonnes']?>
-        <?php echo '<br>'?>
-        <?php echo $_SESSION['nb_cni']?>
-        <?php echo '<br>'?>
-        <?php echo $_SESSION['nb_pass']?>
-        <?php echo '<br>'?>
-        <?php echo $_SESSION['nb_cni_pass']?>
 
         <hr id="separe1">
 

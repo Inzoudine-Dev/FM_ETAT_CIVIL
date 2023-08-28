@@ -28,6 +28,7 @@ class App
         $this->router->get('/','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerAccueil', "index");
         $this->router->get('/Motifs','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerMotifs', "index");
         $this->router->post('/Motifs/Personnes','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerPersonnes', "index");
+        $this->router->post('/Motifs/Personnes/Confirmation','\Maham\FmEtatCivil\Controllers\Rdv\prendre\ControllerConfirmation', "index");
 
 
 

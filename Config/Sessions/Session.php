@@ -35,6 +35,18 @@ class Session
 
     }
 
+    public function inArrayMotifs(){
+
+        return array("nombrePersonnes"=>$_SESSION['nombrePersonnes'], "nb_cni_pass"=>$_SESSION['nb_cni_pass'], "nb_cni"=>$_SESSION['nb_cni'], "nb_pass"=>$_SESSION['nb_pass']);
+
+    }
+
+    public function inArrayPersonnes(){
+
+        return array("nom1"=>$_SESSION['nom1'], "prenom1"=>$_SESSION['prenom1'], "age1"=>$_SESSION['age1']);
+
+    }
+
     public function inObject($nomObjet){
         if($nomObjet=='Personnes') {
                 return $personnes=new Personne($_SESSION['nom1'],$_SESSION['prenom1']);

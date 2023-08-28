@@ -9,7 +9,7 @@ $url=$_GET['url'];
 
 $application=new App($router=new Router($url));
 
-$application->AppRoutes();//definit les routes existant pour la partie utilisateurs
+$application->DefRoutesRdv();//definit les routes existant pour la partie utilisateurs
 // avec get() ou post() du Router.
 
 

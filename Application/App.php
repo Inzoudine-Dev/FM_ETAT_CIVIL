@@ -21,7 +21,7 @@ class App
 
 
     //coté Utilisateurs
-    public function AppRoutes()
+    public function DefRoutesRdv()
     {
 
         //route page d'accueil non connecter Utilisateurs en get

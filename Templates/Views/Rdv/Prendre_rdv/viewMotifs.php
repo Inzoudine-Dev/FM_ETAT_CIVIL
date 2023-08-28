@@ -14,7 +14,7 @@
 
 </div>
 
-<form action="/Projet_etatcivil_objet/accueil/motif/infos_personnes" method="post" class="form_quantité_class" id="form_quantité_id">
+<form action="/FM_ETAT_CIVIL/Motifs/Personnes" method="post" class="form_quantité_class" id="form_quantité_id">
 
     <div class="quantité_personne">
         <p class="question_nb_personne">Pour combien de personnes voulez-vous prendre rendez-vous ?</p>
@@ -90,7 +90,7 @@
 
     <div class="bt_continuer_retour" id="bt_continuer_retour_id">
 
-        <a href="/Projet_etatcivil_objet/accueil" class="lien_bt_retour">RETOUR</a>
+        <a href="/FM_ETAT_CIVIL/" class="lien_bt_retour">RETOUR</a>
 
         <input type="submit" name="bt_continue" class="bt_continuer" id="bt_continuer_id" value="CONTINUER">
 

@@ -4,7 +4,7 @@ namespace Config\BddConnection;
 
 use PDO;
 
-class MySqlConnexion
+class MySqlConnection
 {
 
     private string $host;

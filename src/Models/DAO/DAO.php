@@ -2,14 +2,14 @@
 
 namespace Maham\FmEtatCivil\Models\DAO;
 
-use Config\BddConnection\MySqlConnexion;
+use Config\BddConnection\MySqlConnection;
 
 class DAO
 {
 
     public function Insert(object $objet):void{
 
-        $paramConnexion = new MySqlConnexion('localhost', 'dbetatcivil2', 'root', '');
+        $paramConnexion = new MySqlConnection('localhost', 'dbetatcivil2', 'root', '');
 
         try {
             $connection = $paramConnexion->toConnect();
@@ -75,4 +75,70 @@ class DAO
 
     }
 
-}
+
+    public function selectAll(string $nomTable):array
+    {
+        /*paramettrage de la connexion a la bdd*/
+        $paramConnexion = new MySqlConnection('localhost', 'dbetatcivil2', 'root', '');
+
+        /*rend une connexion a la bdd basés sur le paramettrage précédent*/
+        try {
+            $connection = $paramConnexion->toConnect();
+        } catch (\Exception $exception) {
+            throw new \Exception('ORIGINE: class Manager.php ,methode selectAll() ,utilisation de la methode toConnect() - message erreur : '.$exception->getMessage());
+        }
+
+       /* if($nomTable=="articles") {
+            $sql = 'SELECT * FROM ' . $nomTable;
+            $requete = $connection->prepare($sql);
+            $requete->execute();
+            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+            $tableauObjet = [];
+            for ($i=0;$i<count($resultat);$i++) {
+
+                $sous_categorie=$this->selectById('sous_categories',$resultat [$i]['sous_categories_id']);
+                $tableauObjet[$i]=new Articles($resultat[$i]['id'],$resultat[$i]['nom_article'],$resultat[$i]['description_article'],$resultat[$i]['prix'],$sous_categorie);
+            }
+            return $tableauObjet;
+        }
+
+        if($nomTable=="categories") {
+            $sql = 'SELECT * FROM ' . $nomTable;
+            $requete = $connection->prepare($sql);
+            $requete->execute();
+            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+            $tableauObjet = [];
+            for ($i=0;$i<count($resultat);$i++) {
+
+                $tableauObjet[$i]=$this->selectById('categories',$i+1);
+            }
+            return $tableauObjet;
+        }
+
+        if($nomTable=="sous_categories") {
+            $sql = 'SELECT * FROM ' . $nomTable;
+            $requete = $connection->prepare($sql);
+            $requete->execute();
+            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+            $tableauObjet = [];
+            for ($i=0;$i<count($resultat);$i++) {
+                $categorie=$this->selectById('categories',$resultat[$i]['categories_id']);
+                $tableauObjet[$i]= new Sous_categorie($resultat[$i]['id_sous_categories'],$resultat[$i]['nom_sous_categorie'],$categorie);
+            }
+            return $tableauObjet;
+        }
+
+        if($nomTable=="utilisateurs") {
+            $sql = 'SELECT * FROM ' . $nomTable;
+            $requete = $connection->prepare($sql);
+            $requete->execute();
+            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+            $tableauObjet = [];
+            for ($i=0;$i<count($resultat);$i++) {
+                $tableauObjet[$i]= new Utilisateur($resultat[$i]['id_utilisateurs'],$resultat[$i]['nom'],$resultat[$i]['prenom'],$resultat[$i]['date_naissance'],$resultat[$i]['telephone'],$resultat[$i]['email'],$resultat[$i]['mot_de_passe'],$resultat[$i]['vendeur'],$resultat[$i]['administrateur']);
+            }
+            return $tableauObjet;*/
+        }
+
+
+    }

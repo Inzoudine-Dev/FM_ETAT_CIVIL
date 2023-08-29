@@ -6,14 +6,14 @@ class Rendez_vous
 {
 
     private int $idRendezVous;
-    private string $date;
+    private string $date_rdv;
     private string $heure;
     private Guichet $guichet;
 
-    public function __construct(int $idRendezVous,string $date,string $heure,Guichet $guichet)
+    public function __construct(int $idRendezVous,string $date_rdv,string $heure,Guichet $guichet)
     {
         $this->idRendezVous=$idRendezVous;
-        $this->date=$date;
+        $this->date_rdv=$date_rdv;
         $this->heure=$heure;
         $this->guichet=$guichet;
     }
@@ -29,9 +29,9 @@ class Rendez_vous
     /**
      * @return string
      */
-    public function getDate(): string
+    public function getDateRdv(): string
     {
-        return $this->date;
+        return $this->date_rdv;
     }
 
     /**
@@ -61,9 +61,9 @@ class Rendez_vous
     /**
      * @param string $date
      */
-    public function setDate(string $date): void
+    public function setDate(string $date_rdv): void
     {
-        $this->date = $date;
+        $this->date_rdv = $date_rdv;
     }
 
     /**
@@ -84,7 +84,7 @@ class Rendez_vous
 
     public function __toString(): string
     {
-        return 'id_rendez_vous :'.$this->getIdRendezVous().', date :'.$this->getDate().', heure :'.$this->getHeure().', guichet :'.$this->getGuichet()->__toString();
+        return 'id_rendez_vous :'.$this->getIdRendezVous().', date :'.$this->getDateRdv().', heure :'.$this->getHeure().', guichet :'.$this->getGuichet()->__toString();
     }
 
 }

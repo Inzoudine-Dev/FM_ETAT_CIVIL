@@ -15,6 +15,7 @@
         }
     ],
     "require": {
-      "ext-http": "*"
+      "ext-http": "*",
+      "ext-pdo": "*"
     }
 }

@@ -3,6 +3,10 @@
 namespace Maham\FmEtatCivil\Models\DAO;
 
 use Config\BddConnection\MySqlConnection;
+use Maham\FmEtatCivil\Entities\Guichet;
+use Maham\FmEtatCivil\Entities\Personne;
+use Maham\FmEtatCivil\Entities\Rendez_vous;
+use PDO;
 
 class DAO
 {
@@ -85,60 +89,98 @@ class DAO
         try {
             $connection = $paramConnexion->toConnect();
         } catch (\Exception $exception) {
-            throw new \Exception('ORIGINE: class Manager.php ,methode selectAll() ,utilisation de la methode toConnect() - message erreur : '.$exception->getMessage());
+            throw new \Exception('ORIGINE: class Manager.php ,methode selectAll() ,utilisation de la methode toConnect() - message erreur : ' . $exception->getMessage());
         }
 
-       /* if($nomTable=="articles") {
+        if ($nomTable == "Rendez_vous") {
             $sql = 'SELECT * FROM ' . $nomTable;
             $requete = $connection->prepare($sql);
             $requete->execute();
             $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-            $tableauObjet = [];
-            for ($i=0;$i<count($resultat);$i++) {
+            $tableauObjetRdv = [];
 
-                $sous_categorie=$this->selectById('sous_categories',$resultat [$i]['sous_categories_id']);
-                $tableauObjet[$i]=new Articles($resultat[$i]['id'],$resultat[$i]['nom_article'],$resultat[$i]['description_article'],$resultat[$i]['prix'],$sous_categorie);
+            for ($i = 0; $i < count($resultat); $i++) {
+
+                $rendez_vous = $this->selectById('Rendez_vous', $resultat [$i]['idrendez_vous']);
+                $tableauObjetRdv[$i] = $rendez_vous;
             }
-            return $tableauObjet;
+            return $tableauObjetRdv;
         }
 
-        if($nomTable=="categories") {
+        if ($nomTable == "Personnes") {
             $sql = 'SELECT * FROM ' . $nomTable;
             $requete = $connection->prepare($sql);
             $requete->execute();
             $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-            $tableauObjet = [];
-            for ($i=0;$i<count($resultat);$i++) {
+            $tableauObjetRdv = [];
 
-                $tableauObjet[$i]=$this->selectById('categories',$i+1);
+            for ($i = 0; $i < count($resultat); $i++) {
+
+                $personnes = $this->selectById('Personnes', $resultat [$i]['idPersonnes']);
+                $tableauObjetRdv[$i] = $personnes;
             }
-            return $tableauObjet;
+            return $tableauObjetRdv;
         }
-
-        if($nomTable=="sous_categories") {
-            $sql = 'SELECT * FROM ' . $nomTable;
-            $requete = $connection->prepare($sql);
-            $requete->execute();
-            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-            $tableauObjet = [];
-            for ($i=0;$i<count($resultat);$i++) {
-                $categorie=$this->selectById('categories',$resultat[$i]['categories_id']);
-                $tableauObjet[$i]= new Sous_categorie($resultat[$i]['id_sous_categories'],$resultat[$i]['nom_sous_categorie'],$categorie);
-            }
-            return $tableauObjet;
-        }
-
-        if($nomTable=="utilisateurs") {
-            $sql = 'SELECT * FROM ' . $nomTable;
-            $requete = $connection->prepare($sql);
-            $requete->execute();
-            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
-            $tableauObjet = [];
-            for ($i=0;$i<count($resultat);$i++) {
-                $tableauObjet[$i]= new Utilisateur($resultat[$i]['id_utilisateurs'],$resultat[$i]['nom'],$resultat[$i]['prenom'],$resultat[$i]['date_naissance'],$resultat[$i]['telephone'],$resultat[$i]['email'],$resultat[$i]['mot_de_passe'],$resultat[$i]['vendeur'],$resultat[$i]['administrateur']);
-            }
-            return $tableauObjet;*/
-        }
-
 
     }
+
+
+    public function selectById(string $nomTable, int $id):object
+    {
+        /*paramettrage de la connexion a la bdd*/
+        $paramConnexion = new MySqlConnection('localhost', 'dbetatcivil2', 'root', '');
+
+        /*rend une connexion a la bdd basés sur le paramettrage précédent*/
+        try {
+            $connection = $paramConnexion->toConnect();
+        } catch (\Exception $exception) {
+            throw new \Exception('ORIGINE: class Manager.php ,methode selectAll() ,utilisation de la methode toConnect() - message erreur : ' . $exception->getMessage());
+        }
+
+        if ($nomTable == 'Rendez_vous') {
+
+            $sql = 'SELECT * FROM ' . $nomTable . ' Where (idRendez_vous=' . $id . ')';
+            $requete = $connection->prepare($sql);
+            $requete->execute();
+            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+
+            $sql2 = 'SELECT * FROM  guichets  Where (idGuichets=' . $resultat[0]['guichets_idguichets'] . ')';
+            $requete2 = $connection->prepare($sql2);
+            $requete2->execute();
+            $resultat2 = $requete2->fetchAll(PDO::FETCH_ASSOC);
+
+            $guichet=new Guichet($resultat2[0]['idguichets'],$resultat2[0]['nom_guichets']);
+            $rendez_vous=new Rendez_vous($resultat[0]['idrendez_vous'],$resultat[0]['date_rdv'],$resultat[0]['heure'],$guichet);
+            return $rendez_vous;
+
+        }
+
+        if ($nomTable == 'Personnes') {
+
+            $sql = 'SELECT * FROM ' . $nomTable . ' Where (idPersonnes=' . $id . ')';
+            $requete = $connection->prepare($sql);
+            $requete->execute();
+            $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+
+            $sql2 = 'SELECT * FROM  rendez_vous  Where (idrendez_vous=' . $resultat[0]['rendez_vous_idrendez_vous'] . ')';
+            $requete2 = $connection->prepare($sql2);
+            $requete2->execute();
+            $resultat2 = $requete2->fetchAll(PDO::FETCH_ASSOC);
+
+            $sql3 = 'SELECT * FROM  guichets  Where (idGuichets=' . $resultat2[0]['guichets_idguichets'] . ')';
+            $requete3 = $connection->prepare($sql3);
+            $requete3->execute();
+            $resultat3 = $requete3->fetchAll(PDO::FETCH_ASSOC);
+
+            $guichet=new Guichet($resultat3[0]['idguichets'],$resultat3[0]['nom_guichets']);
+            $rendez_vous=new Rendez_vous($resultat2[0]['idrendez_vous'],$resultat2[0]['date_rdv'],$resultat2[0]['heure'],$guichet);
+            $personne=new Personne($resultat[0]['idPersonnes'],$resultat[0]['nom'],$resultat[0]['prenom'],$resultat[0]['age'],$resultat[0]['telephone'],$resultat[0]['email'],$resultat[0]['responsable'],$resultat[0]['nb_cni'],$resultat[0]['nb_pass'],$resultat[0]['nb_cni_pass'],$rendez_vous);
+            return $personne;
+
+        }
+    }
+
+
+}

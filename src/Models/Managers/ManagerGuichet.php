@@ -2,7 +2,7 @@
 
 namespace Maham\FmEtatCivil\Models\Managers;
 
-class ManagerGuichet extends Manager
+class ManagerGuichet
 {
 
 }

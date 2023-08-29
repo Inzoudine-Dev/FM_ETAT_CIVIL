@@ -2,7 +2,7 @@
 
 namespace Maham\FmEtatCivil\Models\Managers;
 
-class ManagerRendez_vous extends  Manager
+class ManagerRendez_vous
 {
 
 }

@@ -1,0 +1,17 @@
+.lien_bt_Accueil{
+
+    width: 250px;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px #d5b469 solid;
+    border-radius: 20px 20px 20px 20px;
+    text-decoration: none;
+    color: #555555;
+    background-color: #d5b469;
+    display: block;
+    margin: auto;
+    margin-top: 250px;
+
+}

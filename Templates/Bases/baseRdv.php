@@ -11,11 +11,14 @@
     <link rel="shortcut icon" href="/FM_ETAT_CIVIL/Public/Images/Rdv/Prendre/logo.png" />
     <link rel="stylesheet" type="text/css" href="/FM_ETAT_CIVIL/Public/Css/CssBases/styleBaseRdv.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/FM_ETAT_CIVIL/Public/Css/CssViews/Rdv/Prendre/styleAccueil.css" media="all" />
-
+    <link rel="stylesheet" type="text/css" href="/FM_ETAT_CIVIL/Public/Css/CssViews/Rdv/Prendre/styleMotifs.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/FM_ETAT_CIVIL/Public/Css/CssViews/Rdv/Prendre/stylePersonnes.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/FM_ETAT_CIVIL/Public/Css/CssViews/Rdv/Prendre/styleConfirmation.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/FM_ETAT_CIVIL/Public/Css/CssViews/Rdv/Prendre/styleRecapitulatifs.css" media="all" />
 </head>
 
 <body>
-
+    <input type="hidden" name="indice1" value="<?php echo $hidden ;?>" id="indice">
 <header id="header">
 
     <div class="logo_div">
@@ -89,4 +92,10 @@
 </footer>
 
 </body>
+<script type="text/javascript" src="/FM_ETAT_CIVIL/Public/JavaScript/scriptViewMotifs.js"></script>
+<script type="text/javascript" src="/FM_ETAT_CIVIL/Public/JavaScript/scriptIndicateur.js"></script>
+<script type="text/javascript" src="/FM_ETAT_CIVIL/Public/JavaScript/scriptPersonne.js"></script>
+<script type="text/javascript" src="/FM_ETAT_CIVIL/Public/JavaScript/scriptFormPersonne.js"></script>
 </html>
+
+

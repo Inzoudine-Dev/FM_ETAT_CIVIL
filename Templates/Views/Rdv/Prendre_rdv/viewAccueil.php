@@ -1,6 +1,6 @@
 <?php $titre="Rendez-vous pour Carte d'identité et Passeport | Mairie de Dinan";?>
 <?php $titre_sexion_central="1. choix de la démarche";?>
-
+<?php $hidden='0' ;?>
 
 
 <div class="bt_contenue_accueil">

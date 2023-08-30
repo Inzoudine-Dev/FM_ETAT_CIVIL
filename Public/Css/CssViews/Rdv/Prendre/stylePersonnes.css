@@ -1,0 +1,172 @@
+h2{
+    padding: 20px;
+
+}
+
+.bt_continuer_retour2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.form_personnes_class {
+
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+.partie_personne {
+    display: flex;
+    justify-content: center;
+}
+
+.hr_resp{
+    margin: 15px;
+}
+
+#separe1,#separe2,#separe3{
+    margin: 15px;
+}
+.partie_responsable {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.date_heure_responsable{
+
+    text-align: center;
+
+    color: #545454;
+}
+
+.personne1_class{
+    text-align: center;
+    color: #545454;
+}
+
+.personne2_class{
+    text-align: center;
+    color: #545454;
+}
+
+.personne3_class{
+    text-align: center;
+    color: #545454;
+}
+
+.personne4_class{
+    text-align: center;
+    color: #545454;
+}
+
+.titre_partie_personne{
+
+    display: flex;
+    justify-content: center;
+    color: #545454;
+}
+
+.titre_partie_responsable{
+
+    display: flex;
+    justify-content: center;
+    color: #545454;
+}
+
+.nom_class,.prenom_class,.age_class,.civilite_class,.telephone_class,.email_class,.date_rdv_class,.heure_rdv_class{
+    border: 2px #c62936 solid;
+    text-align: center;
+    color: #545454;
+    border-radius: 20px 20px 20px 20px;
+}
+
+#sep1{
+
+    margin: 0px;
+
+}
+
+#sep2{
+
+    margin: 0px;
+
+}
+
+.erreur_personnes{
+    text-align: center;
+    color: #c62936;
+    border: 1px #c62936 solid;
+    border-radius: 20px;
+    visibility: hidden;
+    width: 43%;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: #FCC;
+    display:block;
+}
+
+.erreur_responsables{
+    text-align: center;
+    color: #c62936;
+    border: 1px #c62936 solid;
+    border-radius: 20px;
+    width: 48%;
+    margin: auto;
+    visibility: hidden;
+    margin-bottom: 15px;
+    background-color: #FCC;
+}
+
+.erreur_rdv{
+    text-align: center;
+    color: #c62936;
+    border: 1px #c62936 solid;
+    border-radius: 20px;
+    visibility: hidden;
+    width: 28%;
+    margin: auto;
+    background-color: #FCC;
+}
+
+/*************************************responsive***************************************************************/
+
+@media screen and (max-width: 1037px) {
+
+    .partie_personne {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 502px) {
+    .bt_continuer_retour2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        flex-direction: column;
+
+    }
+
+    .lien_bt_retour {
+        margin: auto;
+        width: 240px;
+    }
+
+    .bt_continuer {
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .partie_responsable {
+        flex-direction: column;
+    }
+}

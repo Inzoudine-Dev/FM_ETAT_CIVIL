@@ -1,0 +1,370 @@
+.alerte{
+    border:2px #c62936 solid;
+
+    width: 400px;
+    margin-left:20px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.image_alerte{
+    margin-top: 10px;
+}
+
+.text_alert1{
+    color: rgb(198, 41, 54);
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0px;
+}
+
+.text_alert2{
+    color: rgb(198, 41, 54);
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text_alert3{
+    color: #FF0000;
+    font-family: verdana, arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.quantité_personne{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nb_prsonnes_class{
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+    height: 40px;
+    width: 95px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+    border:2px #c62936 solid;
+
+}
+
+/* Chrome enleve les fleche champs imput*/
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin:0;
+}
+
+.bt_valider_class{
+    border:1px #d5b469 solid;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #d5b469;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.text_bt_valider{
+    padding: 15px;
+}
+
+
+/* style bloc motif*/
+
+
+.form_quantité_class{
+
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.motif_quantité_class{
+
+    padding: 5px;
+    text-align: center;
+    display: none;
+}
+
+.piece_cni_pass,.piece_cni,.piece_pass{
+
+    padding: 5px;
+    text-align: center;
+    height: 195px;
+    width: 195px;
+    border-radius: 20px 20px 20px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.piece_cni_pass{
+    color: white;
+    background-color: #828282;
+
+}
+
+.piece_cni{
+    color: white;
+    background-color: #c62936;
+
+}
+
+.piece_pass{
+    color: white;
+    background-color: #d5b469;
+
+}
+
+.image_cni_pass{
+    width: 150px;
+    margin-top: 30px;
+
+}
+
+.image_cni{
+    width: 105px;
+    margin-top: 30px;
+
+}
+
+.image_pass{
+
+    height: 88px;
+    margin-top: 16px;
+
+}
+
+.text_cni_pass{
+    width: 200px;
+    margin-top:20px;
+}
+
+.text_cni_pass,.text_cni,.text_pass{
+    text-transform: uppercase;
+}
+
+.quantité_pass_class,.quantité_cni_pass_class,.quantité_cni_class{
+    text-align: center;
+    font-weight: bold;
+    height:40px ;
+    text-transform: uppercase;
+    border:2px #c62936 solid;
+    border-radius: 20px 20px 20px 20px;
+}
+
+
+.bt_continuer_retour{
+    /*display: flex;
+    justify-content: center;*/
+    /* margin-top: 15px;*/
+
+    display: none;
+}
+
+.lien_bt_retour{
+    margin: 15px;
+    width: 250px;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px #c62936 solid;
+    border-radius: 20px 20px 20px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #c62936;
+
+
+}
+
+.bt_continuer{
+    margin: 15px;
+    width: 250px;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px #d5b469 solid;
+    border-radius: 20px 20px 20px 20px;
+    text-decoration: none;
+    color: #545454;
+    background-color: #d5b469;
+    cursor: pointer;
+}
+
+.text_quantité{
+    color: #d5b469;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#erreur_nb_personnes {
+    margin: auto;
+    font-size: 15px;
+    background-color: #FCC;
+    padding: 5px;
+    color: #F00;
+    margin-bottom: 10px;
+    border: solid 1px #F00;
+    width: 40%;
+    border-radius: 40px 40px 40px 40px;
+    display: none;
+
+}
+
+#erreur_motif_quantité{
+    margin: auto;
+    font-size: 14px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #FCC;
+    color: #F00;
+    border: solid 1px #F00;
+    width: 25%;
+    border-radius: 40px 40px 40px 40px;
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+}
+
+#erreur_motif_quantité2{
+    margin: auto;
+    font-size: 14px;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #FCC;
+    color: #F00;
+    border: solid 1px #F00;
+    width: 25%;
+    border-radius: 40px 40px 40px 40px;
+    margin-bottom: 10px;
+    display: none;
+    text-align: center;
+}
+
+.erreur2{
+    display: none;
+    border:2px #c62936 solid;
+    border-radius: 50px 50px 50px 50px;
+    width: 450px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    font-size: 0px;
+    padding: 5px;
+    margin-bottom: 20px;
+
+
+}
+
+/***************************************responsive**************************************************************/
+
+@media screen and (max-width: 960px) {
+    .motif_quantité_class {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        display: none;
+    }
+
+    .piece_cni_pass,.piece_cni,.piece_pass {
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 864px) {
+
+    .alerte {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 445px) {
+
+    .titre_sexion {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .bt_continuer_retour {
+        margin-top: 8px;
+        flex-direction: column;
+    }
+
+    .lien_bt_retour {
+        margin: auto;
+        width: 240px;
+    }
+
+    .bt_continuer {
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .titre_sexion {
+        text-align: center;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 417px) {
+
+    .titre_sexion {
+        text-align: center;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+
+    .titre_sexion {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 393px) {
+
+    .titre_sexion {
+        text-align: center;
+        font-size: 12.8px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+
+    .titre_sexion {
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+
+}

@@ -42,7 +42,7 @@
 
     <a href="/FM_ETAT_CIVIL/Motifs/Personnes" class="lien_bt_modifier">MODIFIER</a>
 
-    <a href="/FM_ETAT_CIVIL/Motifs/Personnes/Confirmation/Recapitulations" class="bt_confirmer">CONFIRMER</a>
+    <a href="/FM_ETAT_CIVIL/Motifs/Personnes/Confirmation/Recapitulatifs" class="bt_confirmer">CONFIRMER</a>
 
 </div>
 

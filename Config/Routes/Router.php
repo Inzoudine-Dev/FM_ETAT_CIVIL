@@ -33,12 +33,12 @@ class Router
 
     public function get(string $url_routes,string $controller, string $actionController){
 
-        $this->routes['GET'][]=new Routes($url_routes, $controller, $actionController);
+        $this->routes['GET'][]=new Route($url_routes, $controller, $actionController);
     }
 
     public function post(string $url_routes,string $controller, string $actionController){
 
-        $this->routes['POST'][]=new Routes($url_routes, $controller, $actionController);
+        $this->routes['POST'][]=new Route($url_routes, $controller, $actionController);
     }
 
     public function Run(){

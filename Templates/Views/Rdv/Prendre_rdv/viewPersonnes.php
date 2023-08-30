@@ -1,6 +1,6 @@
 <?php $titre="Rendez-vous pour Carte d'identité et Passeport | Mairie de Dinan";?>
 <?php $titre_sexion_central="3. les personnes concernées par le rendez-vous";?>
-
+<?php $hidden="2"?> ;
 
 
 <form action="/FM_ETAT_CIVIL/Motifs/Personnes/Confirmation" method="post" class="form_personnes_class" id="form_personnes_id">

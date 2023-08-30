@@ -1,6 +1,5 @@
 <?php $titre="Rendez-vous pour Carte d'identité et Passeport | Mairie de Dinan";?>
 <?php $titre_sexion_central="2. choix du motif du rendez-vous";?>
-<?php $numero="";?>
 <?php $hidden='1' ;?>
 
 <input type="hidden" name="indice1" value="1" id="indice">

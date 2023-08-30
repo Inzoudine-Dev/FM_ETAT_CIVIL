@@ -2,7 +2,7 @@
 
 namespace Config\Routes;
 
-class Routes
+class Route
 {
 
     private string $url_routes;

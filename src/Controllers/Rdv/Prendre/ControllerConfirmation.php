@@ -5,15 +5,17 @@ namespace Maham\FmEtatCivil\Controllers\Rdv\Prendre;
 use Config\Sessions\Session;
 use Maham\FmEtatCivil\Controllers\Controller;
 
+
 class ControllerConfirmation extends Controller
 {
+
     public function index()
     {
-        $donnees=$this->openSession();
+        $donnees=$this->actionSession();
         parent::render("Confirmation", $donnees);
     }
 
-    public function openSession(){
+    public function actionSession(){
         $session=new Session();
         $session->set('donnéesPersonnes');
         $donnees=$session->inArrayPersonnes();
